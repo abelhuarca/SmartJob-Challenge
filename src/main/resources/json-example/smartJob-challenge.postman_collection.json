@@ -1,0 +1,86 @@
+{
+	"info": {
+		"_postman_id": "66d8ca2b-c1f8-47e1-a918-55f2a1ebfc51",
+		"name": "ProyectosDemo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "982872"
+	},
+	"item": [
+		{
+			"name": "SmartJob-Challenge",
+			"item": [
+				{
+					"name": "ListClientDemo",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{AccessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8096/smartJob/challenge/v1/users/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8096",
+							"path": [
+								"smartJob",
+								"challenge",
+								"v1",
+								"users",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateClient",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"name\":\"Abel Huarca Eguizabal\",\r\n\"email\":\"abelho2233434@domain.cl\",\r\n\"password\":\"12346789AHSSASsa\",\r\n\"phones\" : [\r\n        {\r\n        \"number\": \"987654321\" ,\r\n        \"cityCode\" : \"1\" ,\r\n        \"countryCode\" : \"57\"\r\n        },\r\n        {\r\n        \"number\" : \"987654321\" ,\r\n        \"cityCode\" : \"1\" ,\r\n        \"countryCode\" : \"57\"\r\n        }\r\n]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8096/smartJob/challenge/v1/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8096",
+							"path": [
+								"smartJob",
+								"challenge",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
